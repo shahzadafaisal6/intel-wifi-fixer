@@ -1,0 +1,39 @@
+{
+  "adapter": "Intel Centrino Advanced-N 6205",
+  "type": "Wireless",
+  "frequency_bands": [
+    "2.4 GHz",
+    "5 GHz"
+  ],
+  "max_data_rate": {
+    "2.4 GHz": "300 Mbps",
+    "5 GHz": "300 Mbps"
+  },
+  "standards": [
+    "IEEE 802.11a",
+    "IEEE 802.11b",
+    "IEEE 802.11g",
+    "IEEE 802.11n"
+  ],
+  "features": {
+    "MIMO": true,
+    "Wi-Fi Direct": true,
+    "WPA/WPA2": true,
+    "WEP": true,
+    "Bluetooth": true
+  },
+  "security": [
+    "WPA",
+    "WPA2",
+    "WEP"
+  ],
+  "supported_os": [
+    "Windows 7",
+    "Windows 8",
+    "Windows 10",
+    "Linux"
+  ],
+  "driver_version": "15.10.0.5",
+  "release_date": "2011-01-01",
+  "notes": "Ensure that the latest drivers are installed for optimal performance."
+}
