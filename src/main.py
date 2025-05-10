@@ -8,7 +8,7 @@ from src.fixes import apply_all_fixes, update_firmware, configure_driver, scan_n
 from src.utils.ui_helpers import (
     display_banner, get_user_choice, display_message, 
     display_header, display_success, display_error, display_warning,
-    display_footer, display_menu, display_about, clear_screen
+    display_footer, display_menu, display_about, clear_screen, display_table
 )
 
 # Import optional modules
