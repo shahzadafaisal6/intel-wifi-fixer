@@ -356,7 +356,8 @@ def scan_networks_menu(adapter_info):
     
     input("\nPress Enter to return to the previous menu...")
 
-if __name__ == "__main__":
+def main():
+    """Main entry point for the application."""
     try:
         # Check if running with sudo/admin privileges
         if os.geteuid() != 0:
@@ -371,3 +372,6 @@ if __name__ == "__main__":
     except Exception as e:
         display_error(f"An unexpected error occurred: {str(e)}")
         sys.exit(1)
+
+if __name__ == "__main__":
+    main()

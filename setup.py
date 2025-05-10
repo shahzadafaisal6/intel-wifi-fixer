@@ -10,8 +10,8 @@ data_files = [
 setup(
     name='intel-wifi-fixer',
     version='1.0.0',
-    author='Intel WiFi Fixer Team',
-    author_email='support@intelwififixer.example.com',
+    author='Shahzada Faisal Abbas',
+    author_email='shahzadafaisal6@gmail.com',
     description='A comprehensive tool to diagnose and fix issues with the Intel Centrino Advanced-N 6205 wireless adapter.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
@@ -26,7 +26,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'intel-wifi-fixer=src.main:main_menu',
+            'intel-wifi-fixer=src.main:main',
         ],
     },
     classifiers=[

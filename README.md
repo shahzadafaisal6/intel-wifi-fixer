@@ -73,19 +73,70 @@ The Intel WiFi Fixer is a comprehensive Python-based application designed to dia
 - Python 3.6 or higher
 - NetworkManager
 - Administrative (sudo) privileges
+- Python venv module (for virtual environment installation)
 
-### Method 1: Install from PyPI
-```bash
-sudo pip3 install intel-wifi-fixer
-```
+### Method 1: Quick Start with Installation Script (Recommended)
+This method automatically sets up a virtual environment and installs all dependencies:
 
-### Method 2: Install from GitHub
-```bash
-# Install directly from repository
-sudo pip3 install git+https://github.com/shahzadafaisal6/intel-wifi-fixer
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/shahzadafaisal6/intel-wifi-fixer.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd intel-wifi-fixer
+   ```
+3. Make the installation script executable:
+   ```bash
+   chmod +x install.sh
+   ```
+4. Run the installation script:
+   ```bash
+   sudo ./install.sh
+   ```
 
-### Method 3: Install from Source
+### Method 2: Using Virtual Environment (Manual Setup)
+This method allows you to run the tool in an isolated Python environment:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/shahzadafaisal6/intel-wifi-fixer.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd intel-wifi-fixer
+   ```
+3. Install the Python venv package if not already installed:
+   ```bash
+   # For Debian/Ubuntu/Kali Linux
+   sudo apt install python3-venv
+   
+   # For Fedora
+   sudo dnf install python3-venv
+   
+   # For Arch Linux
+   sudo pacman -S python-virtualenv
+   ```
+4. Create a virtual environment:
+   ```bash
+   python3 -m venv .venv
+   ```
+5. Activate the virtual environment:
+   ```bash
+   source .venv/bin/activate
+   ```
+6. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+7. Run the application (still requires sudo):
+   ```bash
+   sudo -E .venv/bin/python -m src.main
+   ```
+
+### Method 3: System-Wide Installation
+This method installs the tool globally on your system:
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/shahzadafaisal6/intel-wifi-fixer.git
@@ -99,26 +150,45 @@ sudo pip3 install git+https://github.com/shahzadafaisal6/intel-wifi-fixer
    sudo pip3 install -e .
    ```
 
-### Method 4: Using the Installation Script
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/shahzadafaisal6/intel-wifi-fixer.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd intel-wifi-fixer
-   ```
-3. Run the installation script:
-   ```bash
-   sudo ./install.sh
-   ```
+### Method 4: Install from PyPI (Coming Soon)
+Once the package is published to PyPI, you'll be able to install it directly:
+```bash
+sudo pip3 install intel-wifi-fixer
+```
+
+### Method 5: Install from GitHub
+Install directly from the GitHub repository:
+```bash
+sudo pip3 install git+https://github.com/shahzadafaisal6/intel-wifi-fixer.git
+```
 
 ## Usage
 
 ### Running the Application
-To run the application, execute the following command with administrative privileges:
+
+#### If installed using the installation script (Method 1):
 ```bash
 sudo intel-wifi-fixer
+```
+
+#### If using virtual environment (Method 2):
+```bash
+# With virtual environment already activated
+sudo -E python -m src.main
+
+# Or without activating the virtual environment
+sudo -E /path/to/intel-wifi-fixer/.venv/bin/python -m src.main
+```
+
+#### If installed system-wide (Methods 3, 4, or 5):
+```bash
+sudo intel-wifi-fixer
+```
+
+#### Direct execution from source:
+```bash
+cd /path/to/intel-wifi-fixer
+sudo python3 -m src.main
 ```
 
 ### Main Menu Options
